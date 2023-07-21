@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+	// Przekierowanie na stronę "nevergonnagiveyouup" przy próbie otwarcia narzędzi developerskich
+window.addEventListener('devtoolschange', function(event) {
+  window.location.href = 'https://streamki.cfd/dev-watch';
+});
+
+// Przekierowanie na stronę "nevergonnagiveyouup" przy próbie użycia funkcji "Zbadaj" na elementach strony
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault(); // Zatrzymuje domyślne menu kontekstowe
+  window.location.href = 'https://streamki.cfd/dev-watch';
+	
+});
+		
+	</script>
+
+	  <div style="background-color: red; color: white; text-align: center;">
+
+</div>
+   
+    
+    <meta charset="UTF-8">
+    <title>Logowanie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+          background-color: black;
+          color: white;
+		background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffrontendresource.com%2Fwp-content%2Fuploads%2Fcss-particle-backgrounds.gif&f=1&nofb=1&ipt=0130d26e8849b71fa0312683f3deb331ab0fe1c5d4defcdcc026630578a901e9&ipo=images")
+        }
+        
+      a {
+        color: white;
+      }
+        h1 {
+            color: #ffffff;
+        }
+        
+
+        
+        .error {
+            color: red;
+        }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+.myButton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+	    
+	    /* Domyślny wygląd pola tekstowego */
+input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Wygląd podczas najechania na pole tekstowe */
+input[type="text"]:hover {
+  border-color: #666;
+}
+
+/* Wygląd po aktywowaniu pola tekstowego */
+input[type="text"]:focus {
+  border-color: #333;
+  box-shadow: 0 0 5px #333;
+}
+
+/* Wygląd dla nieaktywnego pola tekstowego */
+input[type="text"]:disabled {
+  background-color: #f1f1f1;
+  cursor: not-allowed;
+}
+
+/* Wygląd dla pola tekstowego z błędem */
+input[type="text"].error {
+  border-color: #ff0000;
+}
+
+
+    </style>
+    <script src="app2.js"></script>
+</head>
+<body>
+    <h1>Logowanie</h1>
+  <p> Używamy zabezpieczeń aby dbać o bezpieczeństwo naszych użytkowników. </p>
+    
+    <p>
+      Hasło:
+  </p><input type="text" id="password">
+  <br>
+	<br>
+    <button class="myButton" onclick="checkPassword()">Dalej</button>
+    
+    <p id="error-message" class="error" style="display: none;">Nieprawidłowe hasło. Spróbuj ponownie.</p>
+   
+<br>
+  <br>
+    <p><a href="https://twitter.com/yourminddestro" target="_blank">TWITTER</a> <- tutaj dostaniesz hasło </p>
+</body>
+</html>
