@@ -169,6 +169,7 @@ p {
     preload="auto"
     poster="https://cdn.boop.pl/uploads/2023/05/bt5n3hy2-743x418.jpg"
     data-setup='{}'>
+	    <source src="witamy.mp4" type="video/mp4"></source>
   <source src="https://ddy5.webhd.ru/ddy5/premium566/tracks-v1a1/mono.m3u8" type="application/x-mpegURL"></source>
   <p class="vjs-no-js">
     To view this video please enable JavaScript, and consider upgrading to a
@@ -180,6 +181,22 @@ p {
 </video>
   <script>
     var player = videojs('my-player');
+  var videoPlayer = document.getElementById("my-player");
+  var sources = videoPlayer.getElementsByTagName("source");
+  var currentSourceIndex = 0;
+
+  videoPlayer.addEventListener("ended", function() {
+    // Sprawdzamy, czy jest kolejny film
+    if (currentSourceIndex < sources.length - 1) {
+      currentSourceIndex++;
+      videoPlayer.src = sources[currentSourceIndex].src;
+      videoPlayer.load(); // Ładujemy nowy film
+      videoPlayer.play(); // Rozpoczynamy odtwarzanie
+    } else {
+      // Jeśli to był ostatni film, zakończ odtwarzanie lub podejmij inne działania
+      console.log("Wszystkie filmy odtworzone.");
+    }
+  });
   </script>
   <br><br><br><br>
 <p>
