@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<br>
+<br>
+	    <span id="viewer-count">
+        Oglądało nas: <span id="count">0</span>
+    </span>
+
+<head>
+  <script src="https://unpkg.com/browse/@videojs/http-streaming@3.8.0/dist/videojs-http-streaming.min.js"></script>
+<link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+<script src="https://unpkg.com/video.js/dist/video.min.js"></script>
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:image" content="https://streamki.cfd/streamki.gif">
+  <meta name="theme-color" content="#c1111d">
+  <meta propety="og:site_name" content="streamki.cfd">
+  <meta property="og:type" content="website">
+<meta property="og:url" content="https://streamki.cfd">
+<meta property="og:title" content="Streamki">
+<meta property="og:description" content="Wpadnij do nas oglądać z nami różne wydarzenia! (High League, FAME MMA, PRIME MMA, Gromda i wiele więcej!)">
+<meta name="keywords" content="betclic fame mma, aplikacja fame mma, cyfrowy polsat fame mma, discord fame mma, eska fame mma, efortuna fame mma, fame mma, fame mma 18 discord, fame mma cala gala, fame mma cena ppv, fame mma cda, fame mma dzisiaj, fame mma free, fame mma gdzie, fame mma gdzie obejrzec wykop, fame mma gdzie ogladac, fame mma instagram, fame mma link, fame mma live, fame mma na zywo, fame mma na tv, fame mma ogladaj za darmo, fame mma online free, fame mma online stream, fame mma online wykop, fame mma online stream wykop, fame mma retransmisja, fame mma restream, fame mma stream wykop, fame mma stream online, fame mma stream free wykop, fame mma stream, fame mma strona, fame mma strumyk, fame mma transmisja free, fame mma 19, fame mma 19 free, fame mma 19 free stream, fame mma 19 live stream, fame mma 19 live, fame mma 19 na zywo, fame mma 19 na żywo, fame mma 19 stream free, fame mma 19 strumyk, fame mma 19 strumyk tv, fame mma 19 za darmo online, fame mma 19 za darmo, darmowy high league, discord high league za darmo, gala high league za darmo, gdzie mozna obejrzec high league za darmo, gdzie mozna ogladac high league za darmo, gdzie oglądać high league za darmo, gdzie obejrzeć high league za darmo wykop, gdzie obejrzeć high league za darmo, high league darmowe walki, high league for free, high league free discord, high league free stream, high league free ppv, high league gdzie oglądać za darmo wykop, high league gdzie oglądać za darmo, high league na zywo za darmo, high league na żywo za darmo, high league oglądaj za darmo, high league online stream za darmo, high league online za darmo, high league ppv za darmo, high league stream free discord, high league stream free wykop, high league strona za darmo, high league transmisja free, high league transmisja na żywo za darmo, high league transmisja za darmo, high league tv za darmo, high league za darmo, high league za darmo discord, high league za darmo hd, high league za darmo high league, high league za darmo instagram, high league za darmo mecz, high league za darmo live, high league za darmo meczyki, high league za darmo mma, high league za darmo stream, high league za darmo reddit, high league za darmo strumyk, high league za darmo yt, high league za darmo youtube, high league za free, wykop high league za darmo, walki high league za darmo, high league 7, high league 7 ppv, high league 7 za darmo, high league 7 stream alternative, high league 7 stream alternatywa, free streams high league, high league 7 stream free, high league 7 stream mma, high league 7 stream mecz, high league 7 stream mecze, high league 7 stream live, high league 7 stream online za darmo, high league live stream free, high league live stream free wykop, high league 7 streaming, high league 7 stream za darmo, high league 7 stream yt, gdzie mozna obejrzec high league, gdzie można obejrzeć high league za darmo, gdzie obejrzec high league za darmo, gdzie obejrzec high league za darmo wykop, gdzie obejrzec high league za free">
+<meta name="description" content="Wpadnij do nas oglądać z nami różne wydarzenia! (High League, FAME MMA, PRIME MMA, Gromda i wiele więcej!)">
+<link rel="icon" href="ic.ico" type="image/x-icon">
+
+  
+    <title>Streamki</title>
+    <style>
+	    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+	    @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+	            #viewer-count {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+			    color: white;
+        }
+	    
+       body {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+         background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffrontendresource.com%2Fwp-content%2Fuploads%2Fcss-particle-backgrounds.gif&f=1&nofb=1&ipt=0130d26e8849b71fa0312683f3deb331ab0fe1c5d4defcdcc026630578a901e9&ipo=images")
+}
+
+h1 {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 24px;
+    font-family: Montserrat;
+}
+
+h2 {
+	color: #ffffff;
+	font-family: Arial, Montserrat;
+}
+
+h3 {
+		color: #ffffff;
+	font-family: Arial, Montserrat;
+}
+
+h4 {
+		color: #ffffff;
+	font-family: Arial, Montserrat;
+}
+	    
+p {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Pangolin', cursive;
+}
+
+.button {
+    background-color: #c1111d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: sans-serif;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#viewer-count {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/* Pasek przewijania */
+/* Webkit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+}
+
+/* Mozilla Firefox */
+/* Wyłączenie paska przewijania Firefox */
+html {
+    scrollbar-width: none;
+}
+
+/* Wygląd paska przewijania dla Firefox */
+html {
+    scrollbar-color: #888 #f1f1f1;
+}
+
+/* Własne style dla paska przewijania */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #000;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #f1f1f1;
+}
+
+      
+/* Logo */
+
+
+
+/* Stopka */
+p {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: Arial;
+}
+
+/* Link reklamy */
+
+
+    </style>
+</head>
+
+<body>
+			<br>
+		<br>
+			<br>
+		<br>
+    <img id="logo" src="https://ogladaj.live/streamki.gif" alt="Logo Streamki">
+    <p>Bez opłat, bez wymagań, najwyższa jakość</p>
+  <br>
+	<h3 style="color: red;"> PRIME MMA 7</h3>
+  <br>
+		<br>
+		<br>
+<h1> Ogłoszenie </h1>
+<h4> Ostatni stream był udany (Fame reborn), było nas tutaj ok. 24tys za co bardzo dziękuję. <br>
+Jako właściciel chciałbym ogłosić, że PRIME MMA 7 odbędzie się, jednak potrzebuję waszej pomocy <br>
+<br>
+Jak wiecie lub nie, mam własny serwer discord. I chciałbym was poprosić abyście: </h4>
+<br> <h3> 1. Dołączyli na niego <a href="https://discord.gg/dolina"> (LINK) </a>
+<br> 2. Zaprosili na niego swojego ulubionego znajomego
+<br> 3. Wstawili nasz serwer na twitter lub wykop z tagiem #discord #polska #famemma #primemma #community 
+<br> 4. Udzielali się na serwerze (pogadać na kanale głosowym, popisać na tekstowym) 
+<br> 5. Zagłosowali na serwer na top.gg <a href="https://top.gg/servers/1149614999602475058"> (LINK) </a> - wystarczy kliknąć vote </h3>
+	<br> <br>
+<h4> Z góry dziękuję, pozdrawiam. </h4>
+
+	<br> <br> <br>
+	<h2> Klasycznie transmisja odbędzie się poniżej: </h2>
+	<br>
+	<div>
+		<br>
+		<br>
+				<br>
+		<br>
+				<br>
+		<br>
+	  <video
+    width="640px"
+    height="480px"
+    id="my-player"
+    class="video-js"
+    controls
+    preload="auto"
+    poster="https://storage.primemma.tv/content/10/10-prime7-logo.png"
+    data-setup='{}'>
+	    <source src="witamy.mp4" type="video/mp4"></source>
+  <source src="https://ddy5.webhd.ru/ddy5/premium566/tracks-v1a1/mono.m3u8" type="application/x-mpegURL"></source>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a
+    web browser that
+    <a href="https://videojs.com/html5-video-support/" target="_blank">
+      supports HTML5 video
+    </a>
+  </p>
+</video>
+	</div>
+	
+  <script>
+    var player = videojs('my-player');
+  var videoPlayer = document.getElementById("my-player");
+  var sources = videoPlayer.getElementsByTagName("source");
+  var currentSourceIndex = 0;
+
+  videoPlayer.addEventListener("ended", function() {
+    // Sprawdzamy, czy jest kolejny film
+    if (currentSourceIndex < sources.length - 1) {
+      currentSourceIndex++;
+      videoPlayer.src = sources[currentSourceIndex].src;
+      videoPlayer.load(); // Ładujemy nowy film
+      videoPlayer.play(); // Rozpoczynamy odtwarzanie
+    } else {
+      // Jeśli to był ostatni film, zakończ odtwarzanie lub podejmij inne działania
+      console.log("Wszystkie filmy odtworzone.");
+    }
+  });
+  </script>
+  <br><br><br><br>
+			<br>
+		<br>
+<p>
+  © 2023 @ streamki.cfd - All rights reserved.
+  </p>
+  <br>
+  <br>
+	  <script>
+        // Kod JavaScript do obsługi licznika osób
+        var countElement = document.getElementById('count');
+
+        // Sprawdzanie, czy wartość istnieje w localStorage
+        if (localStorage.getItem('viewCount')) {
+            // Jeśli istnieje, pobieramy ją
+            var viewCount = parseInt(localStorage.getItem('viewCount'));
+        } else {
+            // Jeśli nie istnieje, ustawiamy wartość na 0
+            var viewCount = 78521;
+        }
+
+        // Inkrementacja wartości i zapisywanie w localStorage
+        viewCount++;
+        localStorage.setItem('viewCount', viewCount);
+
+        // Wyświetlanie aktualnej wartości
+        countElement.textContent = viewCount;
+    </script>
+			<br>
+		<br>
+			<br>
+		<br>
+</body>
+
+</html>
