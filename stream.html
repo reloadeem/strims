@@ -243,23 +243,17 @@ p {
 	
   <script>
     var player = videojs('my-player');
-  var videoPlayer = document.getElementById("my-player");
-  var sources = videoPlayer.getElementsByTagName("source");
-  var currentSourceIndex = 0;
-
-  videoPlayer.addEventListener("ended", function() {
-    // Sprawdzamy, czy jest kolejny film
-    if (currentSourceIndex < sources.length - 1) {
-      currentSourceIndex++;
-      videoPlayer.src = sources[currentSourceIndex].src;
-      videoPlayer.load(); // Ładujemy nowy film
-      videoPlayer.play(); // Rozpoczynamy odtwarzanie
-    } else {
-      // Jeśli to był ostatni film, zakończ odtwarzanie lub podejmij inne działania
-      console.log("Wszystkie filmy odtworzone.");
-    }
-  });
   </script>
+	<script>
+  var video = document.getElementById('my-player');
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('http://185.243.7.154:80/play/live.php?mac=00:1A:79:3b:22:fc&stream=1293996&extension=ts&play_token=iaBLkSko9I');
+    hls.attachMedia(video);
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'http://185.243.7.154:80/play/live.php?mac=00:1A:79:3b:22:fc&stream=1293996&extension=ts&play_token=iaBLkSko9I';
+  }
+</script>
   <br><br><br><br>
 			<br>
 		<br>
