@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Streamki @FAME 20</title>
+<style>
+    body {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #przyciskKontynuuj {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-decoration: none;
+        display: none;
+    }
+</style>
+</head>
+<body>
+  <p>
+    Cześć, po rozwiązaniu weryfikacji antyrobotowej otrzymasz dostęp do treści
+  </p>
+<div class="h-captcha" data-sitekey="316722e2-a3be-4598-bbdc-1b757bae6df0"></div>
+<a id="przyciskKontynuuj" href="https://roax.space/pobierz">Kontynuuj</a>
+
+<script src="https://hcaptcha.com/1/api.js" async defer></script>
+<script>
+    function hCaptchaCallback(response) {
+        if (response) {
+            document.getElementById("przyciskKontynuuj").style.display = "inline-block";
+        }
+    }
+</script>
+</body>
+</html>
